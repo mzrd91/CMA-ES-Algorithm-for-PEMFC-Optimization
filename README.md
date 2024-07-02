@@ -32,7 +32,40 @@ The results are tabulated as follows:
 
 Additionally, the average best fitness across the 30 runs is:
 
-Average Best Fitness across 30 runs: <0.0024654182223250915>
+Average Best Fitness across 30 runs: 0.0024654182223250915
+
+### Key Insights
+
+1. **Parameter Means and Variances:**
+   - **x1**: The mean value is -1.94402 with a standard deviation of 0.00900848, indicating that this parameter is fairly stable across the runs, with low variance (8.11526e-05).
+   - **x2**: The mean value is 0.00805079 with a very low standard deviation of 0.00013131, suggesting that the optimization converges to a similar value across different runs, with very low variance (1.72424e-08).
+   - **x3**: The mean value is 0.000138878 with a low standard deviation of 1.11358e-05, also indicating stability and low variance (1.24007e-10).
+   - **x4**: The mean value is -0.000264333 with a very low standard deviation of 2.0857e-05, showing stability and low variance (4.35016e-10).
+   - **l**: The mean value is 39.008 with an extremely low standard deviation (7.10543e-15), indicating that this parameter is highly stable and consistent across runs, with almost zero variance (5.04871e-29).
+   - **RC**: The mean value is 0.000755376 with a standard deviation of 0.000129441, indicating moderate stability and variance (1.67549e-08).
+   - **B**: The mean value is 0.428602 with a higher standard deviation of 0.104742, suggesting more variability in this parameter compared to others, with higher variance (0.0109709).
+
+2. **Parameter Stability:**
+   - Parameters like **l**, **x2**, **x3**, and **x4** show very low variance and standard deviation, indicating that these parameters are highly stable and the optimization converges consistently to similar values.
+   - **B** has the highest standard deviation and variance among the parameters, indicating more variability and less consistency in the optimization results for this parameter.
+
+3. **Bound Constraints:**
+   - The parameters are optimized within their specified bounds. The mean values lie within the given upper and lower bounds, showing that the optimization respects the constraints.
+
+4. **Fitness Convergence:**
+   - Although the summary table does not directly show the fitness values, the provided code snippet suggests tracking the best fitness across generations. If the average best fitness across the 30 runs (mentioned as `<average_best_fitness>`) is significantly improved compared to the initial generations, it indicates successful optimization.
+
+### Important Observations
+
+- The extremely low standard deviation and variance for **l** indicate that this parameter may have a significant impact on the model, and the algorithm converges strongly to an optimal value for it.
+- The higher variability in **B** suggests that either this parameter has less influence on the optimization result, or the fitness landscape for **B** is more complex, leading to less consistent convergence.
+- The low variances for other parameters indicate that the CMA-ES algorithm is effective in finding consistent solutions for these parameters across multiple runs.
+
+### Practical Implications
+
+- The stability in the parameters **x2**, **x3**, **x4**, and **l** suggests that these parameters are reliably optimized, and future work can focus on fine-tuning these values for improved model performance.
+- The variability in **B** could warrant further investigation to understand its role in the model and explore if additional constraints or different initialization strategies could lead to more consistent optimization.
+- The insights from these results can be used to improve the PEMFC model, potentially leading to better efficiency and performance of the fuel cell.
 
 
 ## Code Implementation
