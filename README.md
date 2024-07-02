@@ -52,9 +52,6 @@ Average Best Fitness across 30 runs: 0.0024654182223250915
 3. **Bound Constraints:**
    - The parameters are optimized within their specified bounds. The mean values lie within the given upper and lower bounds, showing that the optimization respects the constraints.
 
-4. **Fitness Convergence:**
-   - Although the summary table does not directly show the fitness values, the provided code snippet suggests tracking the best fitness across generations. If the average best fitness across the 30 runs (mentioned as `<average_best_fitness>`) is significantly improved compared to the initial generations, it indicates successful optimization.
-
 ### Important Observations
 
 - The extremely low standard deviation and variance for **l** indicate that this parameter may have a significant impact on the model, and the algorithm converges strongly to an optimal value for it.
